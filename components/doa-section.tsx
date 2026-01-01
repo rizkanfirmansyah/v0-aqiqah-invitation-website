@@ -1,3 +1,5 @@
+import { invitationConfig } from "@/data/invitation-config"
+
 export function DoaSection() {
   return (
     <div className="w-full h-full bg-gradient-to-b from-green-50 via-teal-50 to-cyan-50 flex flex-col items-center justify-between relative overflow-hidden">
@@ -17,18 +19,19 @@ export function DoaSection() {
 
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl space-y-6 w-full">
           <p className="text-2xl md:text-3xl text-right font-bold text-gray-800 leading-relaxed text-balance">
-            اَللّٰهُمَّ لَكَ وَإِلَيْكَ
+            بِسْمِ اللَّهِ وَبِاللَّهِ، اللَّهُمَّ لَكَ وَإِلَيْكَ، هَذِهِ عَقِيقَةُ رَيَّان أَرْكَانْتَا نَايَنْدْرَا أُمَيْر
           </p>
 
           <div className="w-full h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
 
-          <p className="text-lg md:text-xl italic text-gray-600 text-center text-balance">Allahumma laka wa ilaika</p>
+          <p className="text-lg md:text-xl italic text-gray-600 text-center text-balance">
+            {invitationConfig.doaLatin}
+          </p>
 
           <div className="w-full h-px bg-gradient-to-r from-transparent via-teal-400 to-transparent" />
 
           <p className="text-base md:text-lg text-gray-700 leading-relaxed text-center text-balance">
-            Ya Allah, ini aqiqah untukMu dan karena Mu. Atas nama Muhammad Rayyan Al-Hakim. Semoga ia menjadi anak yang
-            shaleh, berbakti kepada kedua orang tua, dan bermanfaat bagi umat.
+            {invitationConfig.doaTranslation}
           </p>
         </div>
       </div>

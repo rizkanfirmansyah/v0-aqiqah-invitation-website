@@ -214,11 +214,14 @@
   touch-action: pan-x;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
+  perspective: 1200px;
 }
 
 .scroll-snap-item {
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 /* Custom scrollbar */

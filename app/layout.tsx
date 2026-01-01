@@ -3,13 +3,14 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import { invitationConfig } from "@/data/invitation-config"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Undangan Aqiqah Muhammad Rayyan",
-  description: "Undangan Tasyakuran Aqiqah Muhammad Rayyan Al-Hakim",
+  title: `Undangan Aqiqah ${invitationConfig.babyName}`,
+  description: `Undangan Tasyakuran Aqiqah ${invitationConfig.babyFullName}`,
   generator: "v0.app",
   icons: {
     icon: [

@@ -1,3 +1,4 @@
+import { invitationConfig } from "@/data/invitation-config"
 export function ClosingSection() {
   return (
     <div className="w-full h-full bg-gradient-to-b from-sky-50 via-blue-50 to-indigo-100 flex flex-col items-center justify-between relative overflow-hidden">
@@ -27,8 +28,8 @@ export function ClosingSection() {
         </p>
 
         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl mb-8">
-          <p className="text-lg font-semibold text-gray-700 mb-2 text-center">Keluarga Besar</p>
-          <p className="text-2xl font-bold text-blue-600 text-center text-balance">Ahmad Fauzi & Siti Nurhaliza</p>
+          <p className="text-lg font-semibold text-gray-700 mb-2 text-center">Keluarga Besar & Saudara/Saudari</p>
+          <p className="text-2xl font-bold text-blue-600 text-center text-balance">{invitationConfig.parent}</p>
         </div>
 
         <div className="w-32 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mb-6" />

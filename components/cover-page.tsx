@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { invitationConfig } from "@/data/invitation-config"
 
 interface CoverPageProps {
   onOpen: () => void
@@ -39,7 +40,9 @@ export function CoverPage({ onOpen }: CoverPageProps) {
         </div>
 
         <h1 className="text-xl font-semibold text-blue-400 mb-2 text-center text-balance">Undangan Aqiqah</h1>
-        <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4 text-center text-balance">Muhammad Rayyan</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-4 text-center text-balance">
+          {invitationConfig.babyName}
+        </h2>
 
         <p className="text-base text-gray-600 text-center max-w-sm mb-8 text-balance leading-relaxed">
           Dengan penuh rasa syukur, kami mengundang Anda untuk hadir dalam acara syukuran aqiqah putra kami

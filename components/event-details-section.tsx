@@ -1,10 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { invitationConfig } from "@/data/invitation-config"
 
 export function EventDetailsSection() {
-  const googleMapsUrl = "https://maps.google.com/?q=Masjid+Al-Ikhlas+Jakarta"
-
   return (
     <div className="w-full h-full bg-gradient-to-b from-amber-50 via-orange-50 to-yellow-50 flex flex-col items-center justify-between relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-32">
@@ -25,7 +24,7 @@ export function EventDetailsSection() {
             <span className="text-4xl">🗓️</span>
             <div className="flex-1">
               <p className="text-sm text-gray-500 mb-1">Hari & Tanggal</p>
-              <p className="text-xl font-bold text-gray-800">Minggu, 22 Januari 2026</p>
+              <p className="text-xl font-bold text-gray-800">{invitationConfig.eventDate}</p>
             </div>
           </div>
 
@@ -35,7 +34,7 @@ export function EventDetailsSection() {
             <span className="text-4xl">⏰</span>
             <div className="flex-1">
               <p className="text-sm text-gray-500 mb-1">Waktu</p>
-              <p className="text-xl font-bold text-gray-800">10:00 WIB - Selesai</p>
+              <p className="text-xl font-bold text-gray-800">{invitationConfig.eventTime}</p>
             </div>
           </div>
 
@@ -45,14 +44,14 @@ export function EventDetailsSection() {
             <span className="text-4xl">📍</span>
             <div className="flex-1">
               <p className="text-sm text-gray-500 mb-1">Lokasi</p>
-              <p className="text-xl font-bold text-gray-800 text-balance">Masjid Al-Ikhlas</p>
-              <p className="text-base text-gray-600 text-balance">Jl. Raya Kebayoran Lama No. 123, Jakarta Selatan</p>
+              <p className="text-xl font-bold text-gray-800 text-balance">{invitationConfig.venueName}</p>
+              <p className="text-base text-gray-600 text-balance">{invitationConfig.venueAddress}</p>
             </div>
           </div>
         </div>
 
         <Button
-          onClick={() => window.open(googleMapsUrl, "_blank")}
+          onClick={() => window.open(invitationConfig.googleMapsUrl, "_blank")}
           className="mt-6 w-full max-w-md px-8 py-6 text-lg font-bold bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white rounded-full shadow-2xl border-4 border-white transform transition-transform active:scale-95"
           size="lg"
         >

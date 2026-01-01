@@ -1,3 +1,5 @@
+import { invitationConfig } from "@/data/invitation-config"
+
 export function ChildInfoSection() {
   return (
     <div className="w-full h-full bg-gradient-to-b from-blue-100 via-purple-50 to-pink-50 flex flex-col items-center justify-between relative overflow-hidden">
@@ -24,21 +26,19 @@ export function ChildInfoSection() {
         </div>
 
         <h3 className="text-3xl md:text-4xl font-bold text-blue-600 mb-8 text-center text-balance">
-          Muhammad Rayyan Al-Hakim
+          {invitationConfig.babyFullName}
         </h3>
 
         <div className="w-full space-y-4">
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
             <p className="text-sm text-gray-500 mb-2 text-center">Lahir pada</p>
-            <p className="text-xl font-bold text-gray-800 text-center">Senin, 15 Januari 2026</p>
-            <p className="text-base text-gray-600 text-center">Pukul 08:30 WIB</p>
+            <p className="text-xl font-bold text-gray-800 text-center">{invitationConfig.birthDate}</p>
+            <p className="text-base text-gray-600 text-center">{invitationConfig.birthTime}</p>
           </div>
 
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
             <p className="text-sm text-gray-500 mb-2 text-center">Putra dari</p>
-            <p className="text-lg font-bold text-gray-800 text-center text-balance">
-              Bapak Ahmad Fauzi & Ibu Siti Nurhaliza
-            </p>
+            <p className="text-lg font-bold text-gray-800 text-center text-balance">{invitationConfig.parents}</p>
           </div>
         </div>
       </div>
