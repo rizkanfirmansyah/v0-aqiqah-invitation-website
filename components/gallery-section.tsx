@@ -1,16 +1,12 @@
 "use client"
 
 import { useState } from "react"
+import { invitationConfig } from "@/data/invitation-config"
 
 export function GallerySection() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const photos = [
-    { query: "cute-newborn-baby-sleeping", alt: "Baby sleeping" },
-    { query: "happy-baby-smiling", alt: "Baby smiling" },
-    { query: "baby-with-parents", alt: "Baby with parents" },
-    { query: "baby-cute-portrait", alt: "Baby portrait" },
-  ]
+  const photos = invitationConfig.gallery
 
   const nextPhoto = () => {
     setCurrentIndex((prev) => (prev + 1) % photos.length)
@@ -38,9 +34,11 @@ export function GallerySection() {
         <div className="relative w-full max-w-lg">
           <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-2xl border-4 border-white">
             <img
-              src={`/.jpg?height=400&width=600&query=${photos[currentIndex].query}`}
+              src={photos[currentIndex].src}
               alt={photos[currentIndex].alt}
-              className="w-full h-full object-cover"
+              className={`w-full h-full object-cover ${
+                currentIndex === 2 ? "object-center" : "object-[center_15%]"
+              }`}
             />
           </div>
 
@@ -70,9 +68,8 @@ export function GallerySection() {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`rounded-full transition-all ${
-                currentIndex === index ? "bg-purple-600 w-10 h-3" : "bg-purple-300 w-3 h-3"
-              }`}
+              className={`rounded-full transition-all ${currentIndex === index ? "bg-purple-600 w-10 h-3" : "bg-purple-300 w-3 h-3"
+                }`}
               aria-label={`Go to photo ${index + 1}`}
             />
           ))}

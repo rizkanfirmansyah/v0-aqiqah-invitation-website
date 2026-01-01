@@ -14,4 +14,11 @@ export const invitationConfig = {
   doaTranslation:
     "Ya Allah, ini aqiqah untukMu dan karena Mu. Atas nama Rayyan Arkanta Nayendra Umair. Semoga ia menjadi anak yang shaleh, berbakti kepada kedua orang tua, dan bermanfaat bagi umat.",
   audioSrc: "/backsound.mp3",
+  gallery: [
+    { src: "/1.jpg", alt: "Foto 1" },
+    { src: "/2.jpg", alt: "Foto 2" },
+    { src: "/3.jpg", alt: "Foto 3" },
+    { src: "/4.jpg", alt: "Foto 4" },
+    { src: "/5.jpg", alt: "Foto 5" },
+  ],
 };

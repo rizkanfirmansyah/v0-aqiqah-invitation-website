@@ -28,7 +28,7 @@ export function CoverPage({ onOpen }: CoverPageProps) {
         <div className="relative mb-6">
           <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-200 via-blue-100 to-white flex items-center justify-center shadow-2xl border-4 border-white">
             <img
-              src="/cute-baby-illustration-sleeping.jpg"
+              src="/1.jpg"
               alt="Baby illustration"
               className="w-40 h-40 rounded-full object-cover"
             />
